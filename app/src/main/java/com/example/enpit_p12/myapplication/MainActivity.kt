@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun onJanKenButtonTapped(view: View?){
         val intent = Intent(this, ResultActivity::class.java)
-        intent.putExtra("MY_HAND",  )
+        intent.putExtra("MY_HAND", )
         startActivity(intent)
     }
 
