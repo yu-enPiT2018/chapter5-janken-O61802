@@ -1,5 +1,6 @@
 package com.example.enpit_p12.myapplication
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.preference.PreferenceManager
@@ -24,7 +25,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onJanKenButtonTapped(view: View?){
-       startActivity<ResultActivity>("MY_HAND" to view?.id)
+        val intent = Intent(this, ResultActivity::class.java)
+        intent.putExtra("MY_HAND", view?.id)
+        startActivity(intent)
     }
 }
 

@@ -16,6 +16,12 @@ class ResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_result)
         val  id = intent.getIntExtra("MY_HAND",0)
 
+        when(id) {
+            R.id.gu -> myHandImage.setImageResource(R.drawable.gu)
+            R.id.choki -> myHandImage.setImageResource(R.drawable.tyoki)
+            R.id.pa -> myHandImage.setImageResource(R.drawable.pa)
+        }
+
         val myHand: Int
         myHand = when(id){
             R.id.gu -> {
